@@ -1,0 +1,165 @@
+export const initialStoryData = {
+  names: {
+    herName: "My Dearest Love",
+    hisName: "Yours Forever",
+  },
+  dates: {
+    firstMetPlatform: "LinkedIn",
+    firstDate: "2024-06-10T18:00:00", // June 10th
+    firstDateFormatted: "June 10th",
+    locationName: "Fuel Station Cafe",
+  },
+  story: [
+    {
+      id: "linkedin",
+      stepNumber: "01",
+      tag: "Where It All Began",
+      title: "The Most Unexpected Connection",
+      subtitle: "From a professional network to my favorite person on Earth",
+      description:
+        "Who would have thought that LinkedIn — a place for resumes, job updates, and networking — would be where destiny was quietly waiting? One message turned into two, two turned into endless conversations, and soon I was waiting all day just to see your message notification pop up.",
+      quote: "Best connection request I have ever accepted in my entire life.",
+      badge: "Connection Accepted ❤️",
+      image: "/src/assets/linkedin_story.jpg",
+      details: [
+        "Late evening chats that made work days fly by",
+        "Realizing how effortlessly we connected",
+        "Counting down the hours until our first real-life meetup",
+      ],
+    },
+    {
+      id: "fuel-station",
+      stepNumber: "02",
+      tag: "June 10th • First Date",
+      title: "Fuel Station Cafe & Nervous Butterflies",
+      subtitle: "The day coffee turned into pure magic",
+      description:
+        "June 10th will forever be etched in my heart. Walking toward Fuel Station Cafe, my hands were slightly shaking with nervous excitement. Then I saw you. Sitting across that table, the aroma of warm coffee in the air, your gorgeous smile made all my nervousness vanish into pure joy.",
+      quote: "We came for coffee at Fuel Station Cafe, but I left with my heart completely stolen.",
+      badge: "June 10th Forever Marked ☕",
+      image: "/src/assets/fuel_station_cafe.jpg",
+      details: [
+        "Warm latte art & sweet pastries on the table",
+        "Talking for hours without checking the clock once",
+        "That magical moment when our eyes met and time stood still",
+      ],
+    },
+    {
+      id: "journey",
+      stepNumber: "03",
+      tag: "Every Single Day Since",
+      title: "Building Our Beautiful Story",
+      subtitle: "You became my safe space and my greatest happiness",
+      description:
+        "From that June 10th evening at Fuel Station Cafe, every day has felt brighter with you. Your laughter is my favorite sound, your warmth is my peace, and having you by my side is a gift I promise never to take for granted.",
+      quote: "In a world of billions of people, my heart chose you.",
+      badge: "Growing Stronger Together 💫",
+      image: "/src/assets/couple_roses.jpg",
+      details: [
+        "Inside jokes only we understand",
+        "How you know when I need comfort even before I ask",
+        "The way you make the simplest moments feel extraordinary",
+      ],
+    },
+  ],
+  apology: {
+    title: "A Sincere Letter Straight From My Heart",
+    salutation: "My Dearest,",
+    paragraphs: [
+      "I am writing this because you mean the absolute universe to me, and seeing you upset, hurt, or disappointed breaks my heart more than words could ever express.",
+      "I want to look you in the eyes and say I am truly, deeply sorry. I made a mistake, and I take full responsibility for it without excuses. Your feelings are completely valid, and it pains me that my actions or words caused you even a single moment of sorrow.",
+      "Ever since our first date on June 10th at Fuel Station Cafe, all I ever wanted was to be the reason behind your sweetest smiles, your loudest laughs, and your safest hugs — never the reason for tears or heartache.",
+      "I promise to listen to you with open ears and an open heart, to be more considerate, and to always cherish the irreplaceable bond we share. You are my dream, my peace, and my favorite adventure.",
+      "Please take all the time you need. I will be right here, loving you with everything I have.",
+    ],
+    closing: "Forever yours, with all my love and promises,",
+    promisePoints: [
+      "I promise to always listen and never dismiss your feelings.",
+      "I promise to communicate with patience, honesty, and kindness.",
+      "I promise more Fuel Station Cafe dates and sweet surprises.",
+      "I promise to protect your smile every single day.",
+    ],
+  },
+  coupons: [
+    {
+      id: "coupon-1",
+      title: "Fuel Station Cafe Date ☕",
+      description: "A cozy date at our special cafe. Any coffee, any pastry, and endless romantic talks.",
+      icon: "Coffee",
+      code: "LOVE-FUEL-CAFE",
+      color: "from-amber-600 to-rose-700",
+    },
+    {
+      id: "coupon-2",
+      title: "Unlimited Warm Cuddles 🫂",
+      description: "Redeemable anytime, day or night. Non-expiring tight hugs until all worries melt away.",
+      icon: "HeartHandshake",
+      code: "HUG-PASS-24-7",
+      color: "from-rose-600 to-pink-700",
+    },
+    {
+      id: "coupon-3",
+      title: "You Win The Argument 🏆",
+      description: "Instant surrender card. You are 100% right, I am 100% wrong, and I will gladly apologize.",
+      icon: "Trophy",
+      code: "QUEEN-WINS-ALWAYS",
+      color: "from-purple-600 to-indigo-700",
+    },
+    {
+      id: "coupon-4",
+      title: "Midnight Drive & Ice Cream 🍦🚗",
+      description: "A peaceful night drive under city lights, your favorite playlist, and delicious scoops.",
+      icon: "Car",
+      code: "SWEET-DRIVE-NIGHT",
+      color: "from-blue-600 to-cyan-700",
+    },
+    {
+      id: "coupon-5",
+      title: "Full Day of Being Pampered 👑",
+      description: "Your wish is my command: breakfast in bed, foot massage, zero chores, total royal treatment.",
+      icon: "Crown",
+      code: "ROYAL-TREATMENT",
+      color: "from-pink-600 to-rose-800",
+    },
+    {
+      id: "coupon-6",
+      title: "Attentive Listening & Comfort 👂🍰",
+      description: "Zero advice, zero judgment, zero interruptions. Just open arms and your favorite sweet treats.",
+      icon: "Sparkles",
+      code: "COMFORT-HEAR-YOU",
+      color: "from-emerald-600 to-teal-800",
+    },
+  ],
+  reasons: [
+    {
+      number: "01",
+      title: "The Way You Smile",
+      text: "That genuine, radiant smile that lit up Fuel Station Cafe on June 10th and continues to light up my whole life.",
+    },
+    {
+      number: "02",
+      title: "Your Unmatched Kindness",
+      text: "How deeply and genuinely you care about people, and the gentle grace you carry with you everywhere.",
+    },
+    {
+      number: "03",
+      title: "Our Inside Jokes",
+      text: "The silly things that make us burst out laughing when nobody else in the room understands.",
+    },
+    {
+      number: "04",
+      title: "How Safe You Make Me Feel",
+      text: "In a chaotic world, sitting beside you or hearing your voice is the only peace I ever need.",
+    },
+    {
+      number: "05",
+      title: "Our LinkedIn Serendipity",
+      text: "The beautiful coincidence that brought two souls together across miles and screens.",
+    },
+    {
+      number: "06",
+      title: "You Simply Being You",
+      text: "I love every single quirk, thought, gesture, and dream of yours. You are completely irreplaceable.",
+    },
+  ],
+};
