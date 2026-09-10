@@ -26,7 +26,7 @@ export default function HeroSection({ names, dates }) {
           }}
         >
           <Sparkles size={14} color="#fda4af" />
-          <span>June 10th • LinkedIn to Fuel Station Cafe</span>
+          <span>June 10th, 2026 • LinkedIn to Fuel Station Cafe</span>
         </div>
 
         {/* Hero Title */}
@@ -68,8 +68,8 @@ export default function HeroSection({ names, dates }) {
         >
           Ever since that unexpected connection on <strong style={{ color: '#fff' }}>LinkedIn</strong> and
           the unforgettable first date we shared at{' '}
-          <strong style={{ color: '#fde68a' }}>Fuel Station Cafe on June 10th</strong>, you have been my
-          greatest happiness. This little corner of the internet is my way of saying I made a mistake,
+          <strong style={{ color: '#fde68a' }}>Fuel Station Cafe on June 10th, 2026</strong>, you have been my
+          greatest happiness, Ifra. This little corner of the internet is Aman's sincere way of saying I made a mistake,
           and my heart belongs solely to you.
         </p>
 

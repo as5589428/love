@@ -73,7 +73,7 @@ export default function Navbar({ onOpenCustomizer, names }) {
                 letterSpacing: '-0.01em',
               }}
             >
-              June 10th
+              {names?.hisName || 'Aman'} & {names?.herName || 'Ifra'}
             </span>
             <span
               style={{
@@ -83,7 +83,7 @@ export default function Navbar({ onOpenCustomizer, names }) {
                 fontFamily: 'var(--font-body)',
               }}
             >
-              • Fuel Station
+              • June 10, 2026
             </span>
           </div>
         </a>

@@ -1,12 +1,12 @@
 export const initialStoryData = {
   names: {
-    herName: "My Dearest Love",
-    hisName: "Yours Forever",
+    herName: "Ifra",
+    hisName: "Aman",
   },
   dates: {
     firstMetPlatform: "LinkedIn",
-    firstDate: "2024-06-10T18:00:00", // June 10th
-    firstDateFormatted: "June 10th",
+    firstDate: "2026-06-10T18:00:00", // June 10th, 2026
+    firstDateFormatted: "June 10th, 2026",
     locationName: "Fuel Station Cafe",
   },
   story: [
@@ -17,7 +17,7 @@ export const initialStoryData = {
       title: "The Most Unexpected Connection",
       subtitle: "From a professional network to my favorite person on Earth",
       description:
-        "Who would have thought that LinkedIn — a place for resumes, job updates, and networking — would be where destiny was quietly waiting? One message turned into two, two turned into endless conversations, and soon I was waiting all day just to see your message notification pop up.",
+        "Who would have thought that LinkedIn — a place for resumes, job updates, and networking — would be where destiny was quietly waiting for us? One message turned into two, two turned into endless conversations, and soon I was waiting all day just to see your message notification pop up, Ifra.",
       quote: "Best connection request I have ever accepted in my entire life.",
       badge: "Connection Accepted ❤️",
       image: "/src/assets/linkedin_story.jpg",
@@ -30,13 +30,13 @@ export const initialStoryData = {
     {
       id: "fuel-station",
       stepNumber: "02",
-      tag: "June 10th • First Date",
+      tag: "June 10th, 2026 • First Date",
       title: "Fuel Station Cafe & Nervous Butterflies",
       subtitle: "The day coffee turned into pure magic",
       description:
-        "June 10th will forever be etched in my heart. Walking toward Fuel Station Cafe, my hands were slightly shaking with nervous excitement. Then I saw you. Sitting across that table, the aroma of warm coffee in the air, your gorgeous smile made all my nervousness vanish into pure joy.",
+        "June 10th, 2026 will forever be etched in my heart. Walking toward Fuel Station Cafe, my hands were slightly shaking with nervous excitement. Then I saw you, Ifra. Sitting across that table, the aroma of warm coffee in the air, your gorgeous smile made all my nervousness vanish into pure joy.",
       quote: "We came for coffee at Fuel Station Cafe, but I left with my heart completely stolen.",
-      badge: "June 10th Forever Marked ☕",
+      badge: "June 10th, 2026 Forever Marked ☕",
       image: "/src/assets/fuel_station_cafe.jpg",
       details: [
         "Warm latte art & sweet pastries on the table",
@@ -51,7 +51,7 @@ export const initialStoryData = {
       title: "Building Our Beautiful Story",
       subtitle: "You became my safe space and my greatest happiness",
       description:
-        "From that June 10th evening at Fuel Station Cafe, every day has felt brighter with you. Your laughter is my favorite sound, your warmth is my peace, and having you by my side is a gift I promise never to take for granted.",
+        "From that June 10th evening at Fuel Station Cafe, every day has felt brighter with you, Ifra. Your laughter is my favorite sound, your warmth is my peace, and having you by my side is a gift I promise never to take for granted.",
       quote: "In a world of billions of people, my heart chose you.",
       badge: "Growing Stronger Together 💫",
       image: "/src/assets/couple_roses.jpg",
@@ -64,12 +64,12 @@ export const initialStoryData = {
   ],
   apology: {
     title: "A Sincere Letter Straight From My Heart",
-    salutation: "My Dearest,",
+    salutation: "My Dearest Ifra,",
     paragraphs: [
-      "I am writing this because you mean the absolute universe to me, and seeing you upset, hurt, or disappointed breaks my heart more than words could ever express.",
-      "I want to look you in the eyes and say I am truly, deeply sorry. I made a mistake, and I take full responsibility for it without excuses. Your feelings are completely valid, and it pains me that my actions or words caused you even a single moment of sorrow.",
-      "Ever since our first date on June 10th at Fuel Station Cafe, all I ever wanted was to be the reason behind your sweetest smiles, your loudest laughs, and your safest hugs — never the reason for tears or heartache.",
-      "I promise to listen to you with open ears and an open heart, to be more considerate, and to always cherish the irreplaceable bond we share. You are my dream, my peace, and my favorite adventure.",
+      "I am writing this because you mean the absolute universe to me, Ifra, and seeing you upset, hurt, or disappointed breaks my heart more than words could ever express.",
+      "I want to look you in the eyes and say I am truly, deeply sorry. I made a mistake, and I take full responsibility for it without any excuses. Your feelings are completely valid, and it pains me that my actions or words caused you even a single moment of sorrow.",
+      "Ever since our first date on June 10th, 2026 at Fuel Station Cafe, all I ever wanted was to be the reason behind your sweetest smiles, your loudest laughs, and your safest hugs — never the reason for tears or heartache.",
+      "I promise to listen to you with open ears and an open heart, to be more considerate, and to always cherish the irreplaceable bond we share. You are my dream, my peace, and my favorite adventure, Ifra.",
       "Please take all the time you need. I will be right here, loving you with everything I have.",
     ],
     closing: "Forever yours, with all my love and promises,",
@@ -84,7 +84,7 @@ export const initialStoryData = {
     {
       id: "coupon-1",
       title: "Fuel Station Cafe Date ☕",
-      description: "A cozy date at our special cafe. Any coffee, any pastry, and endless romantic talks.",
+      description: "A cozy date at our special cafe. Any coffee, any pastry, and endless romantic talks with Aman.",
       icon: "Coffee",
       code: "LOVE-FUEL-CAFE",
       color: "from-amber-600 to-rose-700",
@@ -92,7 +92,7 @@ export const initialStoryData = {
     {
       id: "coupon-2",
       title: "Unlimited Warm Cuddles 🫂",
-      description: "Redeemable anytime, day or night. Non-expiring tight hugs until all worries melt away.",
+      description: "Redeemable anytime, day or night. Non-expiring tight hugs from Aman until all worries melt away.",
       icon: "HeartHandshake",
       code: "HUG-PASS-24-7",
       color: "from-rose-600 to-pink-700",
@@ -100,9 +100,9 @@ export const initialStoryData = {
     {
       id: "coupon-3",
       title: "You Win The Argument 🏆",
-      description: "Instant surrender card. You are 100% right, I am 100% wrong, and I will gladly apologize.",
+      description: "Instant surrender card. You are 100% right, Ifra, and Aman will gladly apologize and pamper you.",
       icon: "Trophy",
-      code: "QUEEN-WINS-ALWAYS",
+      code: "QUEEN-IFRA-WINS",
       color: "from-purple-600 to-indigo-700",
     },
     {
@@ -116,9 +116,9 @@ export const initialStoryData = {
     {
       id: "coupon-5",
       title: "Full Day of Being Pampered 👑",
-      description: "Your wish is my command: breakfast in bed, foot massage, zero chores, total royal treatment.",
+      description: "Your wish is Aman's command: breakfast in bed, foot massage, zero chores, total queen treatment for Ifra.",
       icon: "Crown",
-      code: "ROYAL-TREATMENT",
+      code: "QUEEN-TREATMENT",
       color: "from-pink-600 to-rose-800",
     },
     {
@@ -134,7 +134,7 @@ export const initialStoryData = {
     {
       number: "01",
       title: "The Way You Smile",
-      text: "That genuine, radiant smile that lit up Fuel Station Cafe on June 10th and continues to light up my whole life.",
+      text: "That genuine, radiant smile that lit up Fuel Station Cafe on June 10th, 2026 and continues to light up my whole life.",
     },
     {
       number: "02",
@@ -158,8 +158,8 @@ export const initialStoryData = {
     },
     {
       number: "06",
-      title: "You Simply Being You",
-      text: "I love every single quirk, thought, gesture, and dream of yours. You are completely irreplaceable.",
+      title: "You Simply Being You, Ifra",
+      text: "I love every single quirk, thought, gesture, and dream of yours. You are completely irreplaceable to me.",
     },
   ],
 };

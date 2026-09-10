@@ -85,7 +85,7 @@ export default function DaysCounter({ dates }) {
             }}
           >
             <Calendar size={15} />
-            <span>Since Our First Date • Fuel Station Cafe</span>
+            <span>Since Our First Date • Fuel Station Cafe (June 10th, 2026)</span>
           </div>
 
           <h2

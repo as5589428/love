@@ -15,7 +15,7 @@ import { Heart, Coffee } from 'lucide-react';
 
 export default function App() {
   const [data, setData] = useState(() => {
-    const saved = localStorage.getItem('personal_love_story_data');
+    const saved = localStorage.getItem('personal_love_story_data_v3');
     if (saved) {
       try {
         return JSON.parse(saved);
@@ -29,7 +29,7 @@ export default function App() {
   const [isCustomizerOpen, setIsCustomizerOpen] = useState(false);
 
   useEffect(() => {
-    localStorage.setItem('personal_love_story_data', JSON.stringify(data));
+    localStorage.setItem('personal_love_story_data_v3', JSON.stringify(data));
   }, [data]);
 
   const handleUpdateApology = (newParagraphs) => {
@@ -127,7 +127,7 @@ export default function App() {
           </div>
 
           <p style={{ color: 'var(--color-text-muted)', fontSize: '0.95rem', marginBottom: '0.5rem' }}>
-            Made with all my heart and endless love for <strong style={{ color: '#fff' }}>{data.names.herName}</strong>.
+            Made with all my heart and endless love for <strong style={{ color: '#fff' }}>{data.names.herName}</strong> — From {data.names.hisName} ❤️
           </p>
 
           <p style={{ color: 'var(--color-text-dim)', fontSize: '0.8rem' }}>
