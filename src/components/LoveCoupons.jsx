@@ -14,7 +14,7 @@ const iconMap = {
 export default function LoveCoupons({ coupons, names }) {
   const [redeemed, setRedeemed] = useState({});
 
-  const handleRedeem = (id, title) => {
+  const handleRedeem = (id) => {
     if (redeemed[id]) return;
 
     setRedeemed((prev) => ({
@@ -22,28 +22,27 @@ export default function LoveCoupons({ coupons, names }) {
       [id]: new Date().toLocaleDateString(),
     }));
 
-    // Mini confetti burst
     confetti({
       particleCount: 50,
       spread: 60,
       origin: { y: 0.8 },
-      colors: ['#fda4af', '#f43f5e', '#fde68a'],
+      colors: ['#fda4af', '#ff4d79', '#fef08a'],
     });
   };
 
   return (
-    <section id="coupons" style={{ padding: '4.5rem 0' }}>
+    <section id="coupons" style={{ padding: '3rem 0' }}>
       <div className="content-wrapper">
-        <div style={{ textAlign: 'center', maxWidth: '680px', margin: '0 auto 3.5rem auto' }}>
-          <div className="badge-pill" style={{ marginBottom: '1rem' }}>
-            <Gift size={14} />
+        <div style={{ textAlign: 'center', maxWidth: '650px', margin: '0 auto 2.5rem auto' }}>
+          <div className="badge-pill" style={{ marginBottom: '0.8rem' }}>
+            <Gift size={13} />
             <span>Special For You</span>
           </div>
-          <h2 style={{ fontSize: 'clamp(2rem, 4vw, 3rem)', marginBottom: '0.8rem' }}>
+          <h2 style={{ fontSize: 'clamp(1.8rem, 4.5vw, 2.8rem)', marginBottom: '0.6rem' }}>
             Personal <span className="gradient-text-rose">Love Coupons</span>
           </h2>
-          <p style={{ color: 'var(--color-text-muted)', fontSize: '1.05rem' }}>
-            Non-expiring, guaranteed passes that you can redeem anytime with {names.hisName}.
+          <p style={{ color: 'var(--color-text-muted)', fontSize: 'clamp(0.88rem, 2vw, 1rem)' }}>
+            Non-expiring passes that Ifra can redeem anytime with Aman.
           </p>
         </div>
 
@@ -51,8 +50,8 @@ export default function LoveCoupons({ coupons, names }) {
         <div
           style={{
             display: 'grid',
-            gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))',
-            gap: '1.8rem',
+            gridTemplateColumns: 'repeat(auto-fit, minmax(260px, 1fr))',
+            gap: '1.2rem',
           }}
         >
           {coupons.map((coupon) => {
@@ -64,13 +63,13 @@ export default function LoveCoupons({ coupons, names }) {
                 key={coupon.id}
                 className="glass-panel-interactive"
                 style={{
-                  padding: '2rem 1.6rem',
+                  padding: 'clamp(1.4rem, 3vw, 1.8rem) clamp(1.1rem, 2.5vw, 1.5rem)',
                   display: 'flex',
                   flexDirection: 'column',
                   justifyContent: 'space-between',
                   borderRadius: 'var(--radius-lg)',
                   border: isRedeemed
-                    ? '1px solid rgba(16, 185, 129, 0.4)'
+                    ? '1px solid rgba(16, 185, 129, 0.45)'
                     : '1px solid var(--glass-border)',
                   position: 'relative',
                   overflow: 'hidden',
@@ -81,18 +80,18 @@ export default function LoveCoupons({ coupons, names }) {
                   <div
                     style={{
                       position: 'absolute',
-                      top: '1.5rem',
-                      right: '1.2rem',
+                      top: '1.2rem',
+                      right: '1rem',
                       border: '2px dashed #10b981',
                       color: '#6ee7b7',
-                      padding: '0.2rem 0.6rem',
+                      padding: '0.2rem 0.5rem',
                       borderRadius: '4px',
-                      fontSize: '0.72rem',
+                      fontSize: '0.7rem',
                       fontWeight: '800',
                       textTransform: 'uppercase',
-                      transform: 'rotate(12deg)',
+                      transform: 'rotate(10deg)',
                       background: 'rgba(16, 185, 129, 0.15)',
-                      letterSpacing: '0.05em',
+                      letterSpacing: '0.04em',
                     }}
                   >
                     Redeemed!
@@ -102,31 +101,31 @@ export default function LoveCoupons({ coupons, names }) {
                 <div>
                   <div
                     style={{
-                      width: '46px',
-                      height: '46px',
-                      borderRadius: '12px',
-                      background: 'rgba(244, 63, 94, 0.15)',
-                      border: '1px solid rgba(244, 63, 94, 0.3)',
+                      width: '42px',
+                      height: '42px',
+                      borderRadius: '10px',
+                      background: 'rgba(255, 77, 121, 0.15)',
+                      border: '1px solid rgba(255, 77, 121, 0.35)',
                       display: 'flex',
                       alignItems: 'center',
                       justifyContent: 'center',
-                      marginBottom: '1.2rem',
+                      marginBottom: '1rem',
                       color: '#fda4af',
                     }}
                   >
-                    <IconComponent size={22} />
+                    <IconComponent size={20} />
                   </div>
 
-                  <h3 style={{ fontSize: '1.25rem', marginBottom: '0.5rem', color: '#ffffff' }}>
+                  <h3 style={{ fontSize: '1.15rem', marginBottom: '0.4rem', color: '#ffffff' }}>
                     {coupon.title}
                   </h3>
 
                   <p
                     style={{
-                      fontSize: '0.92rem',
+                      fontSize: '0.88rem',
                       color: 'var(--color-text-muted)',
-                      lineHeight: 1.6,
-                      marginBottom: '1.5rem',
+                      lineHeight: 1.55,
+                      marginBottom: '1.2rem',
                     }}
                   >
                     {coupon.description}
@@ -139,10 +138,10 @@ export default function LoveCoupons({ coupons, names }) {
                       display: 'flex',
                       alignItems: 'center',
                       justifyContent: 'space-between',
-                      paddingTop: '1rem',
+                      paddingTop: '0.8rem',
                       borderTop: '1px dashed rgba(255, 255, 255, 0.1)',
-                      marginBottom: '1rem',
-                      fontSize: '0.75rem',
+                      marginBottom: '0.8rem',
+                      fontSize: '0.72rem',
                       color: 'var(--color-text-dim)',
                     }}
                   >
@@ -151,35 +150,35 @@ export default function LoveCoupons({ coupons, names }) {
                   </div>
 
                   <button
-                    onClick={() => handleRedeem(coupon.id, coupon.title)}
+                    onClick={() => handleRedeem(coupon.id)}
                     disabled={isRedeemed}
                     style={{
                       width: '100%',
-                      padding: '0.65rem 1rem',
+                      padding: '0.6rem 1rem',
                       borderRadius: 'var(--radius-full)',
                       border: 'none',
                       background: isRedeemed
                         ? 'rgba(16, 185, 129, 0.2)'
-                        : 'linear-gradient(135deg, #f43f5e, #be123c)',
+                        : 'linear-gradient(135deg, #ff4d79, #be123c)',
                       color: isRedeemed ? '#6ee7b7' : '#ffffff',
                       fontWeight: '600',
-                      fontSize: '0.88rem',
+                      fontSize: '0.85rem',
                       cursor: isRedeemed ? 'default' : 'pointer',
                       display: 'flex',
                       alignItems: 'center',
                       justifyContent: 'center',
-                      gap: '0.4rem',
+                      gap: '0.35rem',
                       transition: 'var(--transition-smooth)',
                     }}
                   >
                     {isRedeemed ? (
                       <>
-                        <Check size={16} />
-                        <span>Redeemed on {redeemed[coupon.id]}</span>
+                        <Check size={15} />
+                        <span>Claimed on {redeemed[coupon.id]}</span>
                       </>
                     ) : (
                       <>
-                        <Sparkles size={15} />
+                        <Sparkles size={14} />
                         <span>Redeem Pass</span>
                       </>
                     )}

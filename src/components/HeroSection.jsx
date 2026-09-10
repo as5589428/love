@@ -5,37 +5,37 @@ export default function HeroSection({ names, dates }) {
   return (
     <section
       style={{
-        minHeight: '92vh',
+        minHeight: '85vh',
         display: 'flex',
         flexDirection: 'column',
         alignItems: 'center',
         justifyContent: 'center',
         textAlign: 'center',
-        paddingTop: '7rem',
-        paddingBottom: '3rem',
+        paddingTop: '6rem',
+        paddingBottom: '2.5rem',
         position: 'relative',
       }}
     >
-      <div className="content-wrapper" style={{ maxWidth: '880px' }}>
+      <div className="content-wrapper" style={{ maxWidth: '820px', width: '100%' }}>
         {/* Memory Pill Tag */}
         <div
           className="badge-pill animate-float"
           style={{
-            marginBottom: '1.8rem',
-            boxShadow: '0 4px 20px rgba(244, 63, 94, 0.25)',
+            marginBottom: '1.2rem',
+            boxShadow: '0 4px 20px rgba(255, 77, 121, 0.3)',
           }}
         >
-          <Sparkles size={14} color="#fda4af" />
+          <Sparkles size={13} color="#fda4af" />
           <span>June 10th, 2026 • LinkedIn to Fuel Station Cafe</span>
         </div>
 
         {/* Hero Title */}
         <h1
           style={{
-            fontSize: 'clamp(2.5rem, 5.5vw, 4.4rem)',
+            fontSize: 'clamp(2rem, 6.5vw, 3.8rem)',
             fontWeight: '800',
-            lineHeight: 1.12,
-            marginBottom: '1.4rem',
+            lineHeight: 1.18,
+            marginBottom: '1rem',
           }}
         >
           I'm So Sorry,{' '}
@@ -43,12 +43,12 @@ export default function HeroSection({ names, dates }) {
           <br />
           <span
             style={{
-              fontSize: 'clamp(1.8rem, 4vw, 3.2rem)',
+              fontSize: 'clamp(1.4rem, 4.5vw, 2.8rem)',
               fontFamily: 'var(--font-heading)',
               fontStyle: 'italic',
               color: 'var(--color-champagne)',
               display: 'block',
-              marginTop: '0.4rem',
+              marginTop: '0.35rem',
             }}
           >
             You Mean The Entire World To Me.
@@ -58,19 +58,18 @@ export default function HeroSection({ names, dates }) {
         {/* Narrative Subtitle */}
         <p
           style={{
-            fontSize: 'clamp(1rem, 2vw, 1.25rem)',
+            fontSize: 'clamp(0.92rem, 2.5vw, 1.15rem)',
             color: 'var(--color-text-muted)',
-            maxWidth: '680px',
-            margin: '0 auto 2.5rem auto',
-            lineHeight: 1.7,
-            fontWeight: '400',
+            maxWidth: '620px',
+            margin: '0 auto 2rem auto',
+            lineHeight: 1.65,
           }}
         >
           Ever since that unexpected connection on <strong style={{ color: '#fff' }}>LinkedIn</strong> and
-          the unforgettable first date we shared at{' '}
-          <strong style={{ color: '#fde68a' }}>Fuel Station Cafe on June 10th, 2026</strong>, you have been my
-          greatest happiness, Ifra. This little corner of the internet is Aman's sincere way of saying I made a mistake,
-          and my heart belongs solely to you.
+          our first date at{' '}
+          <strong style={{ color: '#fef08a' }}>Fuel Station Cafe on June 10th, 2026</strong>, you have been my
+          greatest happiness, Ifra. This is Aman's heartfelt way of saying I am truly sorry,
+          and my whole heart belongs to you.
         </p>
 
         {/* Action Buttons */}
@@ -79,18 +78,19 @@ export default function HeroSection({ names, dates }) {
             display: 'flex',
             alignItems: 'center',
             justifyContent: 'center',
-            gap: '1rem',
+            gap: '0.75rem',
             flexWrap: 'wrap',
-            marginBottom: '3.5rem',
+            marginBottom: '2.5rem',
+            width: '100%',
           }}
         >
-          <a href="#apology" className="btn-romantic-primary">
-            <Mail size={18} />
+          <a href="#apology" className="btn-romantic-primary" style={{ padding: '0.75rem 1.4rem' }}>
+            <Mail size={17} />
             <span>Open My Apology Letter</span>
           </a>
 
-          <a href="#cafe-date" className="btn-romantic-secondary">
-            <Coffee size={18} color="#f59e0b" />
+          <a href="#cafe-date" className="btn-romantic-secondary" style={{ padding: '0.75rem 1.4rem' }}>
+            <Coffee size={17} color="#fbbf24" />
             <span>Our Fuel Station Memories</span>
           </a>
         </div>
@@ -101,59 +101,38 @@ export default function HeroSection({ names, dates }) {
           style={{
             display: 'inline-flex',
             alignItems: 'center',
-            gap: '1.5rem',
-            padding: '0.9rem 2rem',
+            justifyContent: 'center',
+            gap: '0.8rem',
+            padding: '0.65rem 1.2rem',
             borderRadius: '9999px',
-            border: '1px solid rgba(244, 63, 94, 0.25)',
-            background: 'rgba(26, 20, 38, 0.7)',
+            border: '1px solid rgba(255, 77, 121, 0.3)',
+            background: 'rgba(23, 14, 34, 0.75)',
+            maxWidth: '100%',
+            flexWrap: 'wrap',
           }}
         >
-          <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
-            <span style={{ fontSize: '1.2rem' }}>💼</span>
-            <span style={{ fontSize: '0.85rem', color: 'var(--color-text-dim)' }}>
-              Connected on LinkedIn
+          <div style={{ display: 'flex', alignItems: 'center', gap: '0.4rem' }}>
+            <span style={{ fontSize: '1rem' }}>💼</span>
+            <span style={{ fontSize: '0.78rem', color: 'var(--color-text-dim)' }}>
+              Met on LinkedIn
             </span>
           </div>
 
           <Heart
-            size={18}
-            fill="#f43f5e"
-            color="#f43f5e"
+            size={16}
+            fill="#ff4d79"
+            color="#ff4d79"
             className="animate-heartbeat"
           />
 
-          <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
-            <span style={{ fontSize: '1.2rem' }}>☕</span>
-            <span style={{ fontSize: '0.85rem', color: 'var(--color-text-dim)' }}>
+          <div style={{ display: 'flex', alignItems: 'center', gap: '0.4rem' }}>
+            <span style={{ fontSize: '1rem' }}>☕</span>
+            <span style={{ fontSize: '0.78rem', color: 'var(--color-text-dim)' }}>
               1st Date: Fuel Station Cafe
             </span>
           </div>
         </div>
       </div>
-
-      {/* Down Chevron Indicator */}
-      <a
-        href="#counter"
-        style={{
-          position: 'absolute',
-          bottom: '1.5rem',
-          color: 'var(--color-text-dim)',
-          textDecoration: 'none',
-          display: 'flex',
-          flexDirection: 'column',
-          alignItems: 'center',
-          gap: '0.2rem',
-          fontSize: '0.75rem',
-          letterSpacing: '0.05em',
-          textTransform: 'uppercase',
-          transition: 'var(--transition-smooth)',
-        }}
-        onMouseEnter={(e) => (e.currentTarget.style.color = '#fda4af')}
-        onMouseLeave={(e) => (e.currentTarget.style.color = 'var(--color-text-dim)')}
-      >
-        <span>Our Milestone</span>
-        <ChevronDown size={18} className="animate-float" />
-      </a>
     </section>
   );
 }

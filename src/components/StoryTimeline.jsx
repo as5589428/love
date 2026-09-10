@@ -12,24 +12,24 @@ export default function StoryTimeline({ story }) {
   };
 
   return (
-    <section id="story" style={{ padding: '4.5rem 0' }}>
+    <section id="story" style={{ padding: '3rem 0' }}>
       <div className="content-wrapper">
         {/* Section Header */}
-        <div style={{ textAlign: 'center', maxWidth: '720px', margin: '0 auto 4rem auto' }}>
-          <div className="badge-pill" style={{ marginBottom: '1rem' }}>
-            <Sparkles size={14} />
+        <div style={{ textAlign: 'center', maxWidth: '680px', margin: '0 auto 2.5rem auto' }}>
+          <div className="badge-pill" style={{ marginBottom: '0.8rem' }}>
+            <Sparkles size={13} />
             <span>Our Journey</span>
           </div>
-          <h2 style={{ fontSize: 'clamp(2rem, 4vw, 3rem)', marginBottom: '0.8rem' }}>
-            How A Connection Request <span className="gradient-text-rose">Changed Everything</span>
+          <h2 style={{ fontSize: 'clamp(1.8rem, 4.5vw, 2.8rem)', marginBottom: '0.6rem' }}>
+            From LinkedIn to <span className="gradient-text-rose">Fuel Station Cafe</span>
           </h2>
-          <p style={{ color: 'var(--color-text-muted)', fontSize: '1.05rem' }}>
-            From talking on LinkedIn to sitting across from each other at Fuel Station Cafe on June 10th — here is the story of us.
+          <p style={{ color: 'var(--color-text-muted)', fontSize: 'clamp(0.9rem, 2.5vw, 1.05rem)' }}>
+            The story of how two people met through a simple message and found true love on June 10th, 2026.
           </p>
         </div>
 
         {/* Timeline Stories */}
-        <div style={{ display: 'flex', flexDirection: 'column', gap: '4rem' }}>
+        <div style={{ display: 'flex', flexDirection: 'column', gap: '2.5rem' }}>
           {story.map((item, index) => {
             const isEven = index % 2 === 0;
             const imgSrc = images[item.id] || item.image;
@@ -38,20 +38,20 @@ export default function StoryTimeline({ story }) {
               <div
                 key={item.id}
                 id={item.id === 'fuel-station' ? 'cafe-date' : undefined}
-                className="glass-panel"
+                className="glass-panel timeline-card"
                 style={{
-                  padding: '2.5rem',
+                  padding: 'clamp(1.2rem, 3.5vw, 2.5rem)',
                   display: 'grid',
                   gridTemplateColumns: isEven ? '1.1fr 0.9fr' : '0.9fr 1.1fr',
-                  gap: '2.5rem',
+                  gap: 'clamp(1.5rem, 3vw, 2.5rem)',
                   alignItems: 'center',
                   border:
                     item.id === 'fuel-station'
-                      ? '1px solid rgba(245, 158, 11, 0.4)'
+                      ? '1px solid rgba(251, 191, 36, 0.45)'
                       : '1px solid var(--glass-border)',
                   background:
                     item.id === 'fuel-station'
-                      ? 'rgba(30, 20, 35, 0.8)'
+                      ? 'rgba(28, 16, 36, 0.85)'
                       : 'var(--glass-bg)',
                   borderRadius: 'var(--radius-xl)',
                 }}
@@ -62,23 +62,23 @@ export default function StoryTimeline({ story }) {
                     style={{
                       display: 'flex',
                       alignItems: 'center',
-                      gap: '0.6rem',
-                      marginBottom: '1rem',
+                      gap: '0.5rem',
+                      marginBottom: '0.8rem',
                     }}
                   >
                     <span
                       style={{
                         fontFamily: 'var(--font-heading)',
-                        fontSize: '1.8rem',
+                        fontSize: '1.6rem',
                         fontWeight: '800',
-                        color: 'rgba(244, 63, 94, 0.5)',
+                        color: 'rgba(255, 77, 121, 0.55)',
                       }}
                     >
                       {item.stepNumber}
                     </span>
                     <span
                       className={item.id === 'fuel-station' ? 'badge-gold' : 'badge-pill'}
-                      style={{ fontSize: '0.78rem' }}
+                      style={{ fontSize: '0.75rem' }}
                     >
                       {item.tag}
                     </span>
@@ -86,9 +86,9 @@ export default function StoryTimeline({ story }) {
 
                   <h3
                     style={{
-                      fontSize: 'clamp(1.5rem, 2.5vw, 2.1rem)',
-                      marginBottom: '0.4rem',
-                      color: item.id === 'fuel-station' ? '#fef3c7' : '#ffffff',
+                      fontSize: 'clamp(1.3rem, 3.5vw, 1.9rem)',
+                      marginBottom: '0.3rem',
+                      color: item.id === 'fuel-station' ? '#fef08a' : '#ffffff',
                     }}
                   >
                     {item.title}
@@ -96,9 +96,9 @@ export default function StoryTimeline({ story }) {
 
                   <div
                     style={{
-                      fontSize: '0.95rem',
+                      fontSize: '0.88rem',
                       color: 'var(--color-rose-light)',
-                      marginBottom: '1.2rem',
+                      marginBottom: '0.9rem',
                       fontWeight: '500',
                     }}
                   >
@@ -108,9 +108,9 @@ export default function StoryTimeline({ story }) {
                   <p
                     style={{
                       color: 'var(--color-text-muted)',
-                      fontSize: '1rem',
-                      lineHeight: 1.7,
-                      marginBottom: '1.4rem',
+                      fontSize: 'clamp(0.88rem, 2.5vw, 0.98rem)',
+                      lineHeight: 1.65,
+                      marginBottom: '1.1rem',
                     }}
                   >
                     {item.description}
@@ -119,25 +119,25 @@ export default function StoryTimeline({ story }) {
                   {/* Romantic Quote Card */}
                   <div
                     style={{
-                      padding: '1rem 1.2rem',
+                      padding: '0.8rem 1rem',
                       background: 'rgba(255, 255, 255, 0.04)',
-                      borderLeft: item.id === 'fuel-station' ? '3px solid #f59e0b' : '3px solid #f43f5e',
+                      borderLeft: item.id === 'fuel-station' ? '3px solid #fbbf24' : '3px solid #ff4d79',
                       borderRadius: '0 var(--radius-sm) var(--radius-sm) 0',
-                      marginBottom: '1.4rem',
+                      marginBottom: '1.1rem',
                       fontStyle: 'italic',
                       color: 'var(--color-text-main)',
-                      fontSize: '0.95rem',
+                      fontSize: 'clamp(0.85rem, 2vw, 0.92rem)',
                       display: 'flex',
                       alignItems: 'flex-start',
-                      gap: '0.6rem',
+                      gap: '0.5rem',
                     }}
                   >
-                    <MessageSquareQuote size={20} color={item.id === 'fuel-station' ? '#f59e0b' : '#f43f5e'} />
+                    <MessageSquareQuote size={18} color={item.id === 'fuel-station' ? '#fbbf24' : '#ff4d79'} style={{ flexShrink: 0, marginTop: '2px' }} />
                     <span>"{item.quote}"</span>
                   </div>
 
                   {/* Key Highlights */}
-                  <div style={{ display: 'flex', flexDirection: 'column', gap: '0.5rem' }}>
+                  <div style={{ display: 'flex', flexDirection: 'column', gap: '0.4rem' }}>
                     {item.details.map((detail, idx) => (
                       <div
                         key={idx}
@@ -145,11 +145,11 @@ export default function StoryTimeline({ story }) {
                           display: 'flex',
                           alignItems: 'center',
                           gap: '0.5rem',
-                          fontSize: '0.88rem',
+                          fontSize: 'clamp(0.8rem, 2vw, 0.88rem)',
                           color: 'var(--color-text-muted)',
                         }}
                       >
-                        <CheckCircle2 size={16} color="#fda4af" />
+                        <CheckCircle2 size={15} color="#fda4af" style={{ flexShrink: 0 }} />
                         <span>{detail}</span>
                       </div>
                     ))}
@@ -168,8 +168,8 @@ export default function StoryTimeline({ story }) {
                       borderRadius: 'var(--radius-lg)',
                       overflow: 'hidden',
                       position: 'relative',
-                      boxShadow: '0 20px 40px rgba(0, 0, 0, 0.6)',
-                      border: '1px solid rgba(255, 255, 255, 0.15)',
+                      boxShadow: '0 15px 35px rgba(0, 0, 0, 0.65)',
+                      border: '1px solid rgba(255, 255, 255, 0.16)',
                     }}
                   >
                     <img
@@ -177,13 +177,10 @@ export default function StoryTimeline({ story }) {
                       alt={item.title}
                       style={{
                         width: '100%',
-                        height: '340px',
+                        height: 'clamp(210px, 35vw, 320px)',
                         objectFit: 'cover',
                         display: 'block',
-                        transition: 'transform 0.6s cubic-bezier(0.16, 1, 0.3, 1)',
                       }}
-                      onMouseEnter={(e) => (e.currentTarget.style.transform = 'scale(1.04)')}
-                      onMouseLeave={(e) => (e.currentTarget.style.transform = 'scale(1)')}
                     />
 
                     {/* Gradient Overlay */}
@@ -192,7 +189,7 @@ export default function StoryTimeline({ story }) {
                         position: 'absolute',
                         inset: 0,
                         background:
-                          'linear-gradient(180deg, transparent 60%, rgba(13, 10, 20, 0.85) 100%)',
+                          'linear-gradient(180deg, transparent 55%, rgba(10, 6, 18, 0.88) 100%)',
                         pointerEvents: 'none',
                       }}
                     />
@@ -201,22 +198,22 @@ export default function StoryTimeline({ story }) {
                     <div
                       style={{
                         position: 'absolute',
-                        bottom: '1rem',
-                        left: '1rem',
-                        background: 'rgba(15, 10, 25, 0.85)',
+                        bottom: '0.75rem',
+                        left: '0.75rem',
+                        background: 'rgba(15, 9, 25, 0.88)',
                         backdropFilter: 'blur(10px)',
-                        padding: '0.4rem 0.9rem',
+                        padding: '0.35rem 0.75rem',
                         borderRadius: '9999px',
-                        border: '1px solid rgba(255, 255, 255, 0.12)',
-                        fontSize: '0.8rem',
+                        border: '1px solid rgba(255, 255, 255, 0.15)',
+                        fontSize: '0.75rem',
                         fontWeight: '600',
-                        color: item.id === 'fuel-station' ? '#fde68a' : '#fda4af',
+                        color: item.id === 'fuel-station' ? '#fef08a' : '#fda4af',
                         display: 'flex',
                         alignItems: 'center',
-                        gap: '0.4rem',
+                        gap: '0.35rem',
                       }}
                     >
-                      {item.id === 'fuel-station' ? <Coffee size={14} /> : <Heart size={14} />}
+                      {item.id === 'fuel-station' ? <Coffee size={13} /> : <Heart size={13} />}
                       <span>{item.badge}</span>
                     </div>
                   </div>
@@ -228,13 +225,12 @@ export default function StoryTimeline({ story }) {
       </div>
 
       <style>{`
-        @media (max-width: 900px) {
-          #story .glass-panel {
+        @media (max-width: 820px) {
+          .timeline-card {
             grid-template-columns: 1fr !important;
-            padding: 1.5rem !important;
-            gap: 1.8rem !important;
+            gap: 1.4rem !important;
           }
-          #story .glass-panel > div {
+          .timeline-card > div {
             order: initial !important;
           }
         }

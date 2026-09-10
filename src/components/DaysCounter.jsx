@@ -7,7 +7,6 @@ export default function DaysCounter({ dates }) {
     hours: 0,
     minutes: 0,
     seconds: 0,
-    totalSeconds: 0,
   });
 
   useEffect(() => {
@@ -26,7 +25,6 @@ export default function DaysCounter({ dates }) {
         hours,
         minutes,
         seconds,
-        totalSeconds: Math.floor(difference / 1000),
       });
     };
 
@@ -38,21 +36,21 @@ export default function DaysCounter({ dates }) {
   const units = [
     { label: 'Days', value: timeElapsed.days },
     { label: 'Hours', value: String(timeElapsed.hours).padStart(2, '0') },
-    { label: 'Minutes', value: String(timeElapsed.minutes).padStart(2, '0') },
-    { label: 'Seconds', value: String(timeElapsed.seconds).padStart(2, '0') },
+    { label: 'Mins', value: String(timeElapsed.minutes).padStart(2, '0') },
+    { label: 'Secs', value: String(timeElapsed.seconds).padStart(2, '0') },
   ];
 
   return (
-    <section id="counter" style={{ padding: '3.5rem 0' }}>
+    <section id="counter" style={{ padding: '2.5rem 0' }}>
       <div className="content-wrapper">
         <div
           className="glass-panel"
           style={{
-            padding: '2.5rem 1.8rem',
+            padding: 'clamp(1.5rem, 4vw, 2.5rem) clamp(1rem, 3vw, 1.8rem)',
             textAlign: 'center',
-            maxWidth: '920px',
+            maxWidth: '850px',
             margin: '0 auto',
-            border: '1px solid rgba(244, 63, 94, 0.25)',
+            border: '1px solid rgba(255, 77, 121, 0.3)',
             position: 'relative',
             overflow: 'hidden',
           }}
@@ -64,9 +62,9 @@ export default function DaysCounter({ dates }) {
               top: '-30%',
               left: '50%',
               transform: 'translateX(-50%)',
-              width: '400px',
-              height: '300px',
-              background: 'radial-gradient(circle, rgba(244, 63, 94, 0.15) 0%, transparent 70%)',
+              width: '350px',
+              height: '250px',
+              background: 'radial-gradient(circle, rgba(255, 77, 121, 0.2) 0%, transparent 70%)',
               pointerEvents: 'none',
             }}
           />
@@ -75,23 +73,23 @@ export default function DaysCounter({ dates }) {
             style={{
               display: 'inline-flex',
               alignItems: 'center',
-              gap: '0.5rem',
+              gap: '0.4rem',
               color: 'var(--color-champagne)',
-              fontSize: '0.85rem',
+              fontSize: '0.78rem',
               fontWeight: '600',
               textTransform: 'uppercase',
-              letterSpacing: '0.08em',
-              marginBottom: '0.8rem',
+              letterSpacing: '0.06em',
+              marginBottom: '0.6rem',
             }}
           >
-            <Calendar size={15} />
+            <Calendar size={14} />
             <span>Since Our First Date • Fuel Station Cafe (June 10th, 2026)</span>
           </div>
 
           <h2
             style={{
-              fontSize: 'clamp(1.6rem, 3.2vw, 2.4rem)',
-              marginBottom: '0.6rem',
+              fontSize: 'clamp(1.4rem, 4vw, 2.2rem)',
+              marginBottom: '0.4rem',
             }}
           >
             Treasuring Every Single Second With You
@@ -100,23 +98,23 @@ export default function DaysCounter({ dates }) {
           <p
             style={{
               color: 'var(--color-text-muted)',
-              fontSize: '0.95rem',
-              maxWidth: '560px',
-              margin: '0 auto 2.2rem auto',
+              fontSize: 'clamp(0.85rem, 2.5vw, 0.95rem)',
+              maxWidth: '520px',
+              margin: '0 auto 1.8rem auto',
             }}
           >
-            Ever since that unforgettable evening on <strong style={{ color: '#fda4af' }}>June 10th</strong>,
-            every passing second has made me realize how rare and special what we have truly is.
+            Ever since that magical evening on <strong style={{ color: '#fda4af' }}>June 10th, 2026</strong>,
+            every passing second has made me realize how irreplaceable you are, Ifra.
           </p>
 
-          {/* Time Counter Grid */}
+          {/* Time Counter Grid (Responsive on 400px mobile) */}
           <div
             style={{
               display: 'grid',
               gridTemplateColumns: 'repeat(4, 1fr)',
-              gap: '1rem',
-              maxWidth: '680px',
-              margin: '0 auto 1.8rem auto',
+              gap: 'clamp(0.4rem, 2vw, 1rem)',
+              maxWidth: '640px',
+              margin: '0 auto 1.5rem auto',
             }}
           >
             {units.map((unit) => (
@@ -124,31 +122,30 @@ export default function DaysCounter({ dates }) {
                 key={unit.label}
                 className="glass-panel-subtle"
                 style={{
-                  padding: '1.2rem 0.5rem',
-                  border: '1px solid rgba(255, 255, 255, 0.08)',
+                  padding: 'clamp(0.7rem, 2vw, 1.2rem) clamp(0.3rem, 1vw, 0.6rem)',
+                  border: '1px solid rgba(255, 255, 255, 0.1)',
                   borderRadius: 'var(--radius-md)',
-                  position: 'relative',
-                  overflow: 'hidden',
+                  background: 'rgba(255, 255, 255, 0.05)',
                 }}
               >
                 <div
                   style={{
                     fontFamily: 'var(--font-heading)',
-                    fontSize: 'clamp(1.8rem, 4vw, 3rem)',
+                    fontSize: 'clamp(1.5rem, 5.5vw, 2.8rem)',
                     fontWeight: '700',
                     color: '#ffffff',
                     lineHeight: 1,
-                    marginBottom: '0.4rem',
+                    marginBottom: '0.3rem',
                   }}
                 >
                   {unit.value}
                 </div>
                 <div
                   style={{
-                    fontSize: '0.75rem',
+                    fontSize: 'clamp(0.65rem, 2vw, 0.75rem)',
                     color: 'var(--color-rose-light)',
                     textTransform: 'uppercase',
-                    letterSpacing: '0.06em',
+                    letterSpacing: '0.05em',
                     fontWeight: '600',
                   }}
                 >
@@ -163,16 +160,16 @@ export default function DaysCounter({ dates }) {
             style={{
               display: 'inline-flex',
               alignItems: 'center',
-              gap: '0.5rem',
-              fontSize: '0.85rem',
+              gap: '0.4rem',
+              fontSize: '0.8rem',
               color: 'var(--color-text-dim)',
-              background: 'rgba(255, 255, 255, 0.04)',
-              padding: '0.4rem 1rem',
+              background: 'rgba(255, 255, 255, 0.05)',
+              padding: '0.35rem 0.9rem',
               borderRadius: '9999px',
             }}
           >
-            <Heart size={14} fill="#f43f5e" color="#f43f5e" />
-            <span>Over {timeElapsed.days} days of laughter, memories & endless love</span>
+            <Heart size={13} fill="#ff4d79" color="#ff4d79" />
+            <span>Over {timeElapsed.days} days of laughter, memories & love</span>
           </div>
         </div>
       </div>
